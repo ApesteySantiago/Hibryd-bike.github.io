@@ -5,16 +5,15 @@
     font-family: 'poppins';
     box-sizing: border-box;
 }
-body{
+.carousel-inner img {
     height: 100vh;
     width: 100%;
-    background-image: url(Imagenes_del_fondo/10861.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
+    object-fit: cover; /* Ajusta la imagen para llenar completamente el contenedor */
 }
+
+/* -------------------- */
 /* ----- Menú --------- */
+/* -------------------- */
 .header{
     position: fixed;
     left: 0;
@@ -23,16 +22,17 @@ body{
     backdrop-filter: blur(3px);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    border-bottom: 1px solid #948989;
+    border-bottom: 0px solid #948989;
     width: 100%;
-    height: 15%;
+    height: 7%;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 9999;
 }
 .header a{
-    color: #fff ;
+    color: #1978a9 ;
 }
 .header .logo{
     text-decoration: none;
@@ -59,45 +59,183 @@ body{
 .navbar a:hover::before{
     width: 100%;
 }
+/* -------------------- */
+/* ----- About --------- */
+/* -------------------- */
 
-
-/* ----- Slider de fotos --------- */
-
-.position {
-    position: absolute;
-    top: 58%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#about {
+    background-color: #1978a9;
+    backdrop-filter: blur(3px); /* Fondo gris claro para destacar la sección */
+    padding: 40px 0; /* Espaciado superior e inferior */
+}
+  
+#about p {
+    font-weight: bold;
+    margin: 0 20px; /* Margen a los lados del texto */
+    text-align: center; /* Centrar el texto horizontalmente */
 }
 
-.slider {
-    background-color: antiquewhite;
-    background-size: cover;
-    height: 50%;
-    width: 50%;
-    border-radius: 15px;
-    animation: animate 10s infinite;
+.contenido {
+    width: 55vw; /* Ancho del 80% */
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(225, 225, 225, 0.1);
+    backdrop-filter: blur(3px);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #fff;
+    display: flex; /* Hace que los elementos internos se alineen en fila */
+    align-items: center; /* Centra verticalmente los elementos internos */
+    padding: 20px; /* Espaciado interno de 20px */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7); /* Sombra ancha */
 }
 
-@keyframes animate {
-    20%{
-        background-color: aqua;
-        background-size: cover;
-    }
-    40%{
-        background-color: blueviolet;
-        background-size: cover;
-    }
-    60%{
-        background-color: coral;
-        background-size: cover;
-    }
-    80%{
-        background-color: cyan;
-        background-size: cover;
-    }
-    100%{
-        background-color: red;
-        background-size: cover;
-    }
+/* -------------------- */
+/* ----- expositor --------- */
+/* -------------------- */
+
+#expositor {
+    background-color: rgb(76, 190, 235); /* Fondo gris claro para la sección */
+    padding: 20px 0; /* Espaciado superior e inferior de 20px */
+    
+}
+
+.contenedor {
+    width: 80%;
+}
+
+
+.contenido1 {
+    width: 60vw; /* Ancho del 80% */
+    margin-bottom: 8px;
+    margin-left: 25vh;
+    margin-right: auto;
+    background: rgba(225, 225, 225, 0.1);
+    backdrop-filter: blur(3px);
+    border-radius: 25px;
+    color: #fff;
+    display: flex; /* Hace que los elementos internos se alineen en fila */
+    align-items: center; /* Centra verticalmente los elementos internos */
+    padding: 25px; /* Espaciado interno de 20px */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 1); /* Sombra ancha */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Agregamos transiciones para suavizar los cambios */
+}
+.contenido1:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05); /* Hacemos que crezca un poco (puedes ajustar el valor según desees) */
+}
+
+.contenido2 {
+    width: 60vw; 
+    margin-bottom: 8px;
+    margin-left: 25vh;
+    margin-right: auto;
+    background: rgba(225, 225, 225, 0.1);
+    backdrop-filter: blur(3px);
+    border-radius: 25px;
+    color: #fff;
+    display: flex; 
+    align-items: center; 
+    padding: 20px; 
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7); /* Sombra ancha */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Agregamos transiciones para suavizar los cambios */
+}
+.contenido2:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05); /* Hacemos que crezca un poco (puedes ajustar el valor según desees) */
+}
+
+.contenido3 {
+    width: 60vw; 
+    margin-bottom: 8px;
+    margin-left: 25vh;
+    margin-right: auto;
+    background: rgba(225, 225, 225, 0.1);
+    backdrop-filter: blur(3px);
+    border-radius: 25px;
+    color: #fff;
+    display: flex; 
+    align-items: center; 
+    padding: 20px; 
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.6); /* Sombra ancha */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Agregamos transiciones para suavizar los cambios */
+}
+.contenido3:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05); /* Hacemos que crezca un poco (puedes ajustar el valor según desees) */
+}
+  
+.imagen {
+    flex: 0.8; /* Ocupa el 50% del ancho disponible en el div padre */
+    
+}
+  
+.imagen img {
+    width: 100%; /* Ajusta la imagen para ocupar todo el ancho disponible */
+    height: 180px; /* Altura de 80px */
+    border-radius: 25px;
+}
+  
+.caracteristicas {
+    flex: 1; /* Ocupa el 50% del ancho disponible en el div padre */
+    padding-left: 20px; /* Espaciado a la izquierda para separar las características */
+}
+  
+.caracteristicas p {
+    margin: 0; /* Elimina el margen predeterminado de los párrafos */
+}
+
+/* -------------------- */
+/* ----- contacto --------- */
+/* -------------------- */
+
+#contacto {
+    background-color: #f0f0f0; /* Color de fondo de la sección */
+    padding-top: 50px; /* Espaciado interno de la sección */
+}
+
+.contenedorcontacto {
+    max-width: 80vw; /* Ancho máximo de 500px */
+    margin-left: 25vh; /* Centra el contenido horizontalmente */
+}
+
+.cuadrados {
+    display: flex;
+    margin-bottom: 20px; /* Espacio entre los cuadrados y la información de contacto */
+}
+
+.boton1 {
+    width: 40px;
+    height: 40px;
+    margin-left: 15vh;
+    margin-right: 10px;
+}
+
+.boton2 {
+    width: 40px;
+    height: 40px;
+}
+
+.informacion-contacto {
+    text-align: center; /* Centra el texto y la imagen */
+    margin-left: -25vh;
+}
+
+.logo {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen al contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+}
+
+.ig {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.wsp {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }
